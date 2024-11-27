@@ -1,0 +1,174 @@
+/* Global CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure the body and html take full height */
+  overflow: hidden; /* Prevent unnecessary scrolling */
+}
+
+/* Sidebar container */
+.menu {
+  width: 250px;
+  height: 100vh; /* Full height for the window */
+  background-color: #000;
+  color: #d4af37;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Space between menu items and logout button */
+  padding: 10px 0;
+  position: fixed; /* Fix the menu to the left side of the screen */
+  top: 0;
+  left: 0;
+  font-family: 'Arial', sans-serif; /* Use a clean, professional font */
+}
+
+/* Logo styling */
+.menu-logo {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.menu-logo-img {
+  width: 150px;  /* Adjusted smaller logo size */
+  height: auto; /* Automatically adjust height */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Navigation menu */
+.menu-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.menu-item {
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: lightgrey; /* Gold text color */
+  font-size: 16px; /* Slightly larger font for readability */
+  font-weight: 400; /* Bolden the font to make it more professional */
+  letter-spacing: 0.5px; /* Add slight spacing between letters */
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px; /* Soften the rectangle corners */
+}
+
+.menu-item a {
+  color: inherit; /* Ensure the link inherits the menu item color */
+  text-decoration: none; /* Remove underline from the link */
+  width: 100%; /* Take full width */
+  display: flex;
+  align-items: center;
+}
+
+/* Icon styling for the menu items */
+.menu-item-icon {
+  margin-right: 10px;
+  font-size: 16px; /* Icon size */
+}
+
+/* Text styling for the menu items */
+.menu-item-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+  background-color: #333; /* Dark grey on hover */
+  color: grey;         /* Lighter gold */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to give depth */
+}
+
+/* Active menu item - invert the background and text color */
+.menu-item.active {
+  background-color: grey; /* Gold background for active item */
+  color: #000; /* Invert text color to black for active item */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to active item */
+}
+
+/* Active item icon color */
+.menu-item.active .menu-item-icon {
+  color: #000; /* Invert icon color for the active item */
+}
+
+/* Active item text color */
+.menu-item.active .menu-item-text {
+  color: #000; /* Invert text color for the active item */
+}
+
+/* Logout button styling */
+.logout {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px; /* Make the button smaller */
+  background-color: #e74c3c; /* Red background */
+  color: #fff;
+  font-size: 14px; /* Smaller font size for a compact look */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* No underline for logout */
+  border-radius: 6px; /* Slightly smaller border-radius for the button */
+  width: 180px; /* Reduce the width to make it smaller */
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.logout-icon {
+  margin-right: 8px; /* Adjust margin slightly smaller */
+  font-size: 14px; /* Smaller icon size */
+}
+
+/* Responsive Menu for Mobile and Tablets */
+@media (max-width: 768px) {
+  .menu {
+    width: 200px;
+  }
+  .menu-logo-img {
+    width: 120px;
+  }
+  .menu-item {
+    font-size: 14px;
+  }
+  .dashboard-content {
+    margin-left: 200px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .menu {
+    width: 180px;
+  }
+  .menu-logo-img {
+    width: 100px;
+  }
+  .menu-item {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .dashboard-content {
+    margin-left: 180px;
+    padding: 10px;
+  }
+}
